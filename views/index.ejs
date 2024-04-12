@@ -1,0 +1,108 @@
+<%- include('head') %>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="/styles/allRestaurants.css">
+
+<title>Home</title>
+
+
+<%- include('navbar') %>
+<!-- section cover -->
+<main>
+  <section class="section-cover container-fluid">
+    <div class="row">
+      <div class="col-6 text-center d-flex flex-column justify-content-center izq">
+        <h1>BOCADO.</h1>
+      </div>
+      <div class="col-6  d-flex justify-content-end der">
+        <span class="material-symbols-outlined">
+          arrow_forward_ios
+          </span>
+          </span>
+      </div>
+    </div>
+  </section>
+  
+  
+  <!-- section-description -->
+  <section class="section-description container-fluid">
+    <div class="row">
+      <div class="col-12 text-center d-flex flex-column justify-content-center izq">
+        <p>«No es un sueño. Aquí están los mejores restaurantes de Málaga»</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- section-foto1 -->
+  <section class="section-foto1 container-fluid">
+    <div class="row">
+      <div class="col-12 text-center">
+    </div>
+  </section>
+  
+  
+  <!-- section-restaurantss -->
+  <section class="section-restaurants container-xxl padding-section">
+    <div class="row">
+      <div class="card-outside d-flex justify-content-center col-12">
+        <div class="col-12 text-center d-flex flex-column justify-content-between">
+          <h2>Restaurantes registrados</h2>
+          <hr class="mx-auto" />
+        </div class="row">
+        <% result.forEach((elem) =>{ %>
+          <div class="col-12 col-lg-4 card-inside padding-y-section d-flex flex-column justify-content-center align-items-center mb-5">
+          <img class="mb-4" src="/images/restaurants/<%= elem.restaurant_img %>" alt="">
+          <h3><%= elem.restaurant_name %> %></h3>
+          <p class="mb-4"><%=  elem.style %></></p>
+          <a href="/oneRestaurant/<%= elem.restaurant_id %>">
+            <button class="boton">Ver más</button>
+          </a>
+        </div>
+        <% }) %>
+      </div>
+    </div>
+  </section>
+
+ <!-- section-malaga -->
+ <section class="section-malaga container-fluid padding-section">
+  <div class="row">
+    <div class="card-outside d-flex justify-content-center col-12">
+      <div class="col-12 text-center d-flex flex-column justify-content-between">
+        <h2>¿Qué visitar en Málaga?</h2>
+        <hr class="mx-auto" />
+      </div class="row">
+        <div class="col-12 col-lg-3 card-inside padding-y-section d-flex flex-column justify-content-center align-items-center text-center">
+        <img class="mb-4" src="/images/assets/alcazaba.jpg" alt="">
+        <h3>La Alcazaba</h3>
+        <p class="mb-4">La fortaleza árabe que domina la ciudad</p>
+        </a>
+      </div>
+      <div class="col-12 col-lg-3 card-inside padding-y-section d-flex flex-column justify-content-center align-items-center text-center">
+        <img class="mb-4" src="/images/assets/castillo.jpg" alt="">
+        <h3>Castillo de Gibralfaro</h3>
+        <p class="mb-4">Las mejores vistas de toda la ciudad</p>
+        </a>
+      </div>
+      <div class="col-12 col-lg-3 card-inside padding-y-section d-flex flex-column justify-content-center align-items-center text-center">
+        <img class="mb-4" src="/images/assets/catedral.jpg" alt="">
+        <h3>La catedral</h3>
+        <p class="mb-4">El edificio más majestuoso del centro</p>
+        </a>
+      </div>
+      <div class="col-12 col-lg-3 card-inside padding-y-section d-flex flex-column justify-content-center align-items-center text-center">
+        <img class="mb-4" src="/images/assets/muelle.jpg" alt="">
+        <h3>Muelle Uno</h3>
+        <p class="mb-4">Centro comercial al aire libre</p>
+        </a>
+      </div>
+     
+
+    </div>
+  </div>
+</section>
+
+
+</main>
+
+
+
+<%- include('footer') %>

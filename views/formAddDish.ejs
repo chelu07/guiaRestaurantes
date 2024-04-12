@@ -1,0 +1,70 @@
+<%- include('head') %>
+<link rel="stylesheet" href="/styles/formAddDish.css">
+<title>Añadir plato</title>
+<%- include('navbar') %>
+
+
+ <!-- section-foto1 -->
+ <section class="section-foto1 container-fluid">
+  <div class="row">
+    <div class="col-12 text-center">
+  </div>
+</section>
+
+
+<!-- section2 -->
+<section class="section2">
+      <div class="container-xxl d-flex flex-column">
+        <div class="row justify-content-center padding-y-section">
+    
+      <form class="d-flex flex-column"
+      action="/dishes/addDish/<%= restaurant_id %>" 
+        method="post" 
+        enctype="multipart/form-data"
+      >
+      <h3>AÑADE UN PLATO A TU LISTA</h3>
+        <input 
+            type="text"
+            name="dish_name"
+            placeholder="Nombre del plato"
+        >
+       
+        <input 
+             
+            type="text"
+            name="dish_description"
+            placeholder="Breve descripción"
+        >
+        <label class="label-img d-flex align-items-center justify-content-center" for="file">Subir una foto</label>
+        <input
+            id="file"
+            name="img" 
+            type="file"
+            hidden
+        >
+        <div class="d-flex align-items-center justify-content-center p-5 gap-2"> 
+            <button 
+              class="label-img">
+              Aceptar
+            </button>
+
+            <a href="/oneRestaurant/<%= restaurant_id %>">
+                <button 
+                  class="label-img" 
+                  type="button">
+                  Cancelar
+                </button>
+            </a>  
+            <button class="label-img" type="reset">
+              Limpiar
+            </button>
+          </div>
+          </form>
+          </div>
+        </div>
+        </div>
+    </section>
+</main>
+
+
+<%- include('footer') %>

@@ -1,0 +1,92 @@
+<%- include('head') %>
+<link rel="stylesheet" href="/styles/registerRestaurant.css">
+<title>Registro</title>
+<%- include('navbar') %>
+
+
+ <!-- section-foto1 -->
+ <section class="section-foto1 container-fluid">
+  <div class="row">
+    <div class="col-12 text-center">
+  </div>
+</section>
+
+
+<!-- section2 -->
+<section class="section2">
+      <div class="container-xxl d-flex flex-column">
+        <div class="row justify-content-center padding-y-section">
+          <div class="col-12 text-center mb-4 d-flex flex-column justify-content-center">
+            <h2>¡Regístrate ya!</h2>
+          </div>
+          <form class="d-flex flex-column"
+          action="/register" 
+        method="post" 
+        enctype="multipart/form-data"
+      >
+        <input 
+            type="text"
+            name="restaurant_name"
+            placeholder="Nombre de tu restaurante"
+        >
+        <input 
+            type="text"
+            name="style"
+            placeholder="Tipo de cocina"
+        >
+        <input 
+            type="email"
+            name="email"
+            placeholder="Email"
+        >
+        <input 
+        type="tel"
+        name="phone_number"
+        placeholder="Teléfono"
+        >
+        <input 
+            type="password"
+            name="password"
+            placeholder="Contraseña"
+        >
+        <input 
+            type="password"
+            name="password2"
+            placeholder="Repite contraseña"
+        >
+        <input 
+            class="description" 
+            type="text"
+            name="restaurant_description"
+            placeholder="Breve descripción"
+        >
+        <label class="label-img d-flex align-items-center justify-content-center" for="file">Subir una foto</label>
+        <input
+            id="file"
+            name="img" 
+            type="file"
+            hidden
+        >
+        <h3>
+          <%= typeof message != 'undefined' ? message : null %>
+        </h3>
+        <div class="d-flex align-items-center justify-content-center p-5 gap-2"> 
+            <button class="label-img">Aceptar</button>
+            <a href="/">
+                <button class="label-img" type="button">
+                  Cancelar
+                </button>
+            </a>  
+            <button class="label-img" type="reset">
+              Limpiar
+            </button>
+          </div>
+          </form>
+          </div>
+        </div>
+        </div>
+    </section>
+</main>
+
+
+<%- include('footer') %>

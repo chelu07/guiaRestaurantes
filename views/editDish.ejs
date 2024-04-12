@@ -1,0 +1,73 @@
+<%- include('head') %>
+<link rel="stylesheet" href="/styles/formEditDish.css">
+<title>Edición plato</title>
+<%- include('navbar') %>
+
+
+ <!-- section-foto1 -->
+ <section class="section-foto1 container-fluid">
+  <div class="row">
+    <div class="col-12 text-center">
+  </div>
+</section>
+
+
+<!-- section2 -->
+<section class="section2">
+      <div class="container-xxl d-flex flex-column">
+        <div class="row justify-content-center padding-y-section">
+    
+      <form class="d-flex flex-column"
+        action="/dishes/editDish/<%= result[0].dish_id %>/<%= result[0].restaurant_id %>" 
+        method="post" 
+        enctype="multipart/form-data"
+      >
+      <h3 class="mb-5">EDITA TU PLATO</h3>
+        <input 
+            type="text"
+            name="dish_name"
+            placeholder="Nombre del plato"
+            value="<%= result[0].dish_name %>"
+        >
+       
+        <input 
+            class="description" 
+            type="text"
+            name="dish_description"
+            placeholder="Breve descripción"
+            value="<%= result[0].dish_description %>"
+        >
+        <label class="label-img d-flex align-items-center justify-content-center" for="file">Cambia la foto</label>
+        <input
+            id="file"
+            name="img" 
+            type="file"
+            hidden
+            value="<%= result[0].dish_img %>"
+        >
+        <div class="d-flex align-items-center justify-content-center p-5 gap-2"> 
+            <button 
+              class="label-img">
+              Aceptar
+            </button>
+
+            <a href="/oneRestaurant/<%= result[0].restaurant_id %>">
+                <button 
+                  class="label-img" 
+                  type="button">
+                  Cancelar
+                </button>
+            </a>  
+            <button class="label-img" type="reset">
+              Limpiar
+            </button>
+          </div>
+          </form>
+          </div>
+        </div>
+        </div>
+    </section>
+</main>
+
+
+<%- include('footer') %>

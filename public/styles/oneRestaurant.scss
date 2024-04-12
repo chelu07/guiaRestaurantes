@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Jost:ital,wght@0,200;0,300;0,400;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,300;0,400;1,400&display=swap');
+
+body {
+  font-family: 'Jost', sans-serif;
+}
+
+.padding-section {
+  padding: 4rem 0;
+}
+
+button {
+  background-color: #EE5957;
+  border-radius: 2rem;
+  border: none;
+  padding: 0.7rem;
+  width: 8rem;
+  font-family: 'Jost', sans-serif;
+  color: white;
+  transition: all 0.2s;
+}
+
+button:hover {
+  background-color: transparent;
+  border: 1px solid #EE5957;
+  color: #EE5957;
+}
+
+button:active {
+	transform: scale(0.9);
+  background-color: transparent;
+  border: 1px solid #EE5957;
+  color: #EE5957;
+}
+
+
+  // // navbar
+  header {
+  
+    .navbar-brand {
+      font-family: 'Archivo Black', sans-serif;
+    }
+
+    .buttons {
+      background-color: #EE5957;
+      border-radius: 2rem;
+      border: none;
+      padding: 0.7rem;
+      width: 8rem;
+      font-family: 'Jost', sans-serif;
+      color: white;
+    }
+
+  }
+
+// main
+
+
+
+
+
+// section cover
+.section-cover {
+  
+  img {
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0.6rem;
+    height: 40rem;
+  }
+
+  h1 {
+    margin-top: 7rem;
+    font-size: 3.8rem;
+  }
+
+  h2 {
+    margin-top: 2rem;
+    font-size: 1.8rem;
+    color: #5F6368;
+    padding: 0 10rem;
+  }
+
+  .p-style {
+    margin-top: 1rem;
+    font-size: 1.7rem;
+    color: #EE5957;
+  }
+
+  .cuadro {
+    padding: 0.7rem;
+    border-radius: 4rem;
+    width:20rem;
+    height: 7rem;
+    border: 2px solid #B1B0B0;
+    margin-bottom: 1.6rem;
+    
+
+    p {
+
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+       
+        font-size: 1.2rem;
+        color: #B1B0B0;
+        
+
+    }
+  }
+  
+  .img {
+      width: 2.5rem;
+      height: 2.5rem;
+      margin-top: 0.3rem;
+      
+      
+    
+  }
+
+ 
+}
+
+
+//section-platos 
+.section-platos {
+
+  hr {
+    opacity: 1;
+    width: 6rem;
+    border-top: 3px solid black;
+  }
+  
+  .card-outside{
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-top: 2rem;
+  }
+
+  h2 {
+    font-size: 2.8rem;
+    font-family: 'Jost', sans-serif;
+  }
+
+  .h2-platos {
+    margin-top: -5rem;
+  }
+
+  h3 {
+    font-size: 2.5rem;
+    font-family: 'Jost', sans-serif;
+  }
+
+  .card-inside{
+    width: 25rem;
+    padding: 0 0 2rem 0;
+  
+    
+    
+    img {
+      width: 25rem;
+      border-radius: 0.6rem;
+      object-fit: cover;
+      object-position: center;
+      
+    }
+
+    p {
+      color: rgb(167, 166, 166);
+      font-size: 1.3rem;
+    }
+
+    .boton {
+      color: #EE5957;
+      border: 1px solid #EE5957;
+      background-color: white;
+      text-decoration: none;
+      margin-bottom: 1rem;
+      transition: all 0.2s;
+      
+    }
+
+    .boton:hover {
+      background-color: #EE5957;
+      border: 1px solid #EE5957;
+      color: white;
+      
+    }
+    
+    .boton:active {
+      background-color: #EE5957;
+      border: 1px solid #EE5957;
+      color: white;
+      color: #EE5957;
+    }
+    
+  }
+}
+
+
+
+
+/* Footer */
+footer {
+	padding: 8vh 15vw;
+	display: flex;
+  flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+  background-color: black;
+  color: white;
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 2rem;
+}
+footer .icons {
+	display: flex;
+	gap: 1rem;
+}
+footer .icons i {
+	font-size: 2rem;
+}
+
+
+
+@media (width < 600px) {
+
+  .section-cover {
+  
+    img {
+      object-fit: cover;
+      object-position: center;
+      border-radius: 0.6rem;
+      height: 20rem;
+    }
+  
+    h1 {
+      margin-top: 3.8rem;
+      font-size: 2.8rem;
+    }
+  
+    h2 {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+      color: #5F6368;
+      padding: 0 1rem;
+    }
+  
+  
+
+    .p-style {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    color: #EE5957;
+    }
+
+    p {
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    color: #B1B0B0;
+    }
+  }
+
+
+}
+
+@media (width < 600px) {
+
+  .section-platos {
+
+    hr {
+      opacity: 1;
+      width: 6rem;
+      border-top: 3px solid black;
+    }
+    
+    .card-outside{
+      flex-wrap: wrap;
+      gap: 0.1rem;
+      
+      
+    }
+
+    .h2-platos {
+      margin-top: -5rem;
+      font-size: 2.2rem;
+    }
+  
+    h2 {
+      font-size: 2rem;
+      font-family: 'Jost', sans-serif;
+    }
+  
+    h3 {
+      font-size: 2rem;
+      font-family: 'Jost', sans-serif;
+    }
+  
+    .card-inside{
+      width: 20rem;
+      padding: -2rem;
+      
+    
+      
+      
+      img {
+        width: 20rem;
+        border-radius: 0.6rem;
+        object-fit: cover;
+        object-position: center;
+        
+      }
+  
+      p {
+        color: rgb(167, 166, 166);
+        font-size: 1.3rem;
+      }
+  
+      .boton {
+        color: #EE5957;
+        border: 1px solid #EE5957;
+        background-color: white;
+        text-decoration: none;
+        margin-bottom: 0.1;
+        transition: all 0.1s;
+        
+      }
+  
+      .boton:hover {
+        background-color: #EE5957;
+        border: 1px solid #EE5957;
+        color: white;
+        
+      }
+      
+      .boton:active {
+        background-color: #EE5957;
+        border: 1px solid #EE5957;
+        color: white;
+        color: #EE5957;
+      }
+
+      
+      
+    }
+  }
+
+}

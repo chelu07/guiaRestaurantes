@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Jost:ital,wght@0,200;0,300;0,400;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,300;0,400;1,400&display=swap");
+.padding-section {
+  padding: 4rem 0;
+}
+
+header .navbar-brand {
+  font-family: "Archivo Black", sans-serif;
+}
+header .buttons {
+  background-color: #EE5957;
+  border-radius: 2rem;
+  border: none;
+  padding: 0.7rem;
+  width: 8rem;
+  font-family: "Jost", sans-serif;
+  color: white;
+}
+
+.section-foto1 {
+  background-image: url(/images/assets/BG4.jpg);
+  background-position: bottom;
+  background-size: cover;
+  height: 40vh;
+}
+
+.section2 form {
+  width: 40rem;
+  font-family: sans-serif;
+  border-radius: 0.1rem;
+  padding: 3rem;
+  background-color: white;
+  margin-top: -15rem;
+  margin-bottom: 5rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.67);
+  font-family: "Jost", sans-serif;
+  aspect-ratio: 1/1;
+  gap: 1.5rem;
+}
+.section2 form input {
+  margin-bottom: 1rem;
+  border-radius: 0.1rem;
+  border: 1px solid rgb(135, 134, 134);
+  height: 2.5rem;
+}
+.section2 .label-img {
+  background-color: #EE5957;
+  border-radius: 2rem;
+  border: 1px solid #EE5957;
+  padding: 0.7rem;
+  width: 8rem;
+  font-family: "Jost", sans-serif;
+  color: white;
+  transition: all 0.1s;
+}
+.section2 .label-img:hover {
+  background-color: transparent;
+  border: 1px solid #EE5957;
+  color: #EE5957;
+}
+.section2 .label-img:active {
+  transform: scale(0.9);
+  background-color: transparent;
+  border: 1px solid #EE5957;
+  color: #EE5957;
+}
+.section2 .botones {
+  gap: 1rem;
+}
+.section2 h3 {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+/* Footer */
+footer {
+  padding: 8vh 15vw;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  font-family: "Archivo Black", sans-serif;
+  font-size: 2rem;
+}
+
+footer .icons {
+  display: flex;
+  gap: 1rem;
+}
+
+footer .icons i {
+  font-size: 2rem;
+}
+
+@media (width < 600px) {
+  .section2 form {
+    width: 22rem;
+    font-family: sans-serif;
+    border-radius: 0.1rem;
+    padding: 2rem;
+    background-color: white;
+    margin-top: -15rem;
+    margin-bottom: 5rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.67);
+    font-family: "Jost", sans-serif;
+    aspect-ratio: 1/1;
+    gap: 1.5rem;
+  }
+  .section2 form input {
+    margin-bottom: 1rem;
+    border-radius: 0.1rem;
+    border: 1px solid rgb(135, 134, 134);
+    height: 2.5rem;
+  }
+  .section2 form h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+  .section2 .label-img {
+    background-color: #EE5957;
+    border-radius: 2rem;
+    border: 1px solid #EE5957;
+    padding: 0.7rem;
+    width: 8rem;
+    font-family: "Jost", sans-serif;
+    color: white;
+    transition: all 0.1s;
+  }
+  .section2 .label-img:hover {
+    background-color: transparent;
+    border: 1px solid #EE5957;
+    color: #EE5957;
+  }
+  .section2 .label-img:active {
+    transform: scale(0.9);
+    background-color: transparent;
+    border: 1px solid #EE5957;
+    color: #EE5957;
+  }
+  .section2 .botones {
+    gap: 1rem;
+  }
+}/*# sourceMappingURL=formAddDish.css.map */

@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Jost:ital,wght@0,200;0,300;0,400;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,300;0,400;1,400&display=swap");
+body {
+  font-family: "Jost", sans-serif;
+}
+
+.padding-section {
+  padding: 4rem 0;
+}
+
+header .navbar-brand {
+  font-family: "Archivo Black", sans-serif;
+}
+header .buttons {
+  background-color: #EE5957;
+  border-radius: 2rem;
+  border: none;
+  padding: 0.7rem;
+  width: 8rem;
+  font-family: "Jost", sans-serif;
+  color: white;
+}
+
+.section-cover img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  border-radius: 0.6rem;
+  height: 26rem;
+}
+.section-cover h1 {
+  margin-top: 7rem;
+  font-size: 3.8rem;
+}
+.section-cover p {
+  margin-top: 1rem;
+  font-size: 1.9rem;
+  color: #B1B0B0;
+}
+
+/* Footer */
+footer {
+  padding: 8vh 15vw;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  font-family: "Archivo Black", sans-serif;
+  font-size: 2rem;
+}
+
+footer .icons {
+  display: flex;
+  gap: 1rem;
+}
+
+footer .icons i {
+  font-size: 2rem;
+}
+
+@media (width < 600px) {
+  .section-cover img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+    border-radius: 0.6rem;
+    height: 20rem;
+  }
+  .section-cover h1 {
+    margin-top: 3.8rem;
+    font-size: 2.8rem;
+  }
+  .section-cover h2 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    color: #5F6368;
+    padding: 0 1rem;
+  }
+  .section-cover .p-style {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    color: #EE5957;
+  }
+  .section-cover p {
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    color: #B1B0B0;
+  }
+}
+@media (width < 600px) {
+  .section-platos hr {
+    opacity: 1;
+    width: 6rem;
+    border-top: 3px solid black;
+  }
+  .section-platos .card-outside {
+    flex-wrap: wrap;
+    gap: 0.1rem;
+  }
+  .section-platos .h2-platos {
+    margin-top: -8rem;
+    font-size: 2.2rem;
+  }
+  .section-platos h2 {
+    font-size: 2rem;
+    font-family: "Jost", sans-serif;
+  }
+  .section-platos h3 {
+    font-size: 2rem;
+    font-family: "Jost", sans-serif;
+  }
+  .section-platos .card-inside {
+    width: 20rem;
+    padding: -2rem;
+  }
+  .section-platos .card-inside img {
+    width: 20rem;
+    border-radius: 0.6rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+  }
+  .section-platos .card-inside p {
+    color: rgb(167, 166, 166);
+    font-size: 1.3rem;
+  }
+  .section-platos .card-inside .boton {
+    color: #EE5957;
+    border: 1px solid #EE5957;
+    background-color: white;
+    text-decoration: none;
+    gap: 2rem;
+  }
+}/*# sourceMappingURL=about.css.map */

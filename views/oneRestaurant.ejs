@@ -1,0 +1,93 @@
+<%- include('head') %>
+<link rel="stylesheet" href="/styles/oneRestaurant.css" />
+
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+/>
+
+<title>Restaurantes</title>
+<%- include('navbar') %>
+
+<!-- section-cover -->
+<main>
+  <section class="section-cover container-xxl">
+    <div class="row d-flex padding-section">
+      <div class="col-12 text-center d-flex flex-column justify-content-center">
+        <img src="/images/restaurants/<%= result[0].restaurant_img %>" alt="" />
+        <h1><%= result[0].restaurant_name %></h1>
+        <h2>«<%= result[0].restaurant_description %>»</h2>
+        <p class="p-style"><%= result[0].style %></p>
+       
+          <div class="row d-flex align-items-center justify-content-center flex-row  gap-3">
+            <div class="cuadro col-6 text-center d-flex flex-column align-items-center">
+              <img class="img" src="/images/assets/llamada.png" alt="">
+              <p><%= result[0].phone_number %></p>    
+            </div>
+            <div class="cuadro col-6 text-center d-flex flex-column align-items-center">
+              <img class="img" src="/images/assets/email.png" alt="">
+              <p><%= result[0].email %></p>     
+            </div>
+          </div>
+
+            
+         
+
+           
+         
+        
+        <div>
+          <a href="/editRestaurant/<%= result[0].restaurant_id %>">
+            <button>Editar</button>
+          </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- section-platos -->
+  <section class="section-platos container-fluid padding-section">
+    <div class="row">
+      <div class="card-outside d-flex justify-content-center col-12">
+        <div
+          class="col-12 text-center d-flex flex-column justify-content-between"
+        >
+          <h2 class="h2-platos">Platos estrella:</h2>
+          <hr class="mx-auto mb-4" />
+          <div>
+            <a href="/dishes/addDish/<%= result[0].restaurant_id %>">
+              <button>Añadir plato</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="row d-flex justify-content-center align-items-center padding-y-section card-outside"
+    >
+      <% result_dish.forEach((elem) =>{ %>
+      <div
+        class="col-12 col-lg-3 card-inside d-flex flex-column text-center mb-5"
+      >
+        <img class="mb-4" src="/images/dishes/<%= elem.dish_img %>" alt="" />
+        <h3 class="mb-3"><%= elem.dish_name %> %></h3>
+        <p class="mb-4"><%= elem.dish_description %></p>
+        <div class="row">
+          <a
+            href="/dishes/editDish/<%= elem.dish_id %>/<%= elem.restaurant_id  %>"
+          >
+            <div class="col"><button class="boton">Editar</button></div>
+          </a>
+          <a
+            href="/dishes/deleteDish/<%= elem.dish_id %>/<%= elem.restaurant_id  %>"
+          >
+            <div class="col"><button class="boton">Eliminar</button></div>
+          </a>
+        </div>
+      </div>
+      <% }) %>
+    </div>
+  </section>
+</main>
+
+<%- include('footer') %>
